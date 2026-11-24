@@ -10,6 +10,7 @@ void setUp(void){
 void tearDown(void){
     //Clean and shut down everything
 }
+
 void test_Thermostat_Init(void){
     TEST_ASSERT_EQUAL(THERMOSTAT_INIT, Thermostat_GetState());
 }
@@ -72,7 +73,6 @@ void test_Thermostat_OutOfRange(void){
 int main(void) {
     UNITY_BEGIN();
     
-    // On lance chaque scénario
     RUN_TEST(test_Thermostat_Init);
     RUN_TEST(test_Thermostat_SwitchToRegulating);
     RUN_TEST(test_Thermostat_StaysRegulating);
